@@ -9,6 +9,6 @@ The cafe then grew and expanded to hundreds of outlets across the country. In or
 
 # Project structure
 
-The project has 2 main components:
-    - Orders_tracking_app_local: The software application that helps the client to log and track orders using CLI command
-    - ETL: The ETL pipeline 
+This project has 2 main components:
+- Orders_tracking_app_local: The software application that helps the client to log and track orders using CLI command
+- ETL: The ETL pipeline 
