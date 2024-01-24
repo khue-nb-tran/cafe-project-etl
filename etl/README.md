@@ -24,9 +24,9 @@ Grafana is the data analytics software. It is hosted on an EC2 instance using Do
 
 This folder contains:
 
-    - Lambda_function: The codes on AWS Lambda that perform the ETL steps 
-        - Lambda_load_Redshift: The codes that load the data in the "Clean Data Bucket" into a Redshift Database.
-        - Lambda_tranform: the codes that extract the data from each file in the "Dirty-Data" Bucket and perform the transformation step and load the tranformed data into a new CSV file in a S3 bucket called "Clean-Data" Bucket.
+- Lambda_function: The codes on AWS Lambda that perform the ETL steps 
+    + Lambda_load_Redshift: The codes that load the data in the "Clean Data Bucket" into a Redshift Database.
+    + Lambda_tranform: the codes that extract the data from each file in the "Dirty-Data" Bucket and perform the transformation step and load the tranformed data into a new CSV file in a S3 bucket called "Clean-Data" Bucket.
 
-    - Tranform: The codes that perform Extract and Tranform steps which were written to work on local machine.
+- Tranform: The codes that perform Extract and Tranform steps which were written to work on local machine.
 
