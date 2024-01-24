@@ -27,23 +27,24 @@ The program has option to exit/ return to main menu to assist user with navigati
 # Program structure
 
 Main Menu:
-0: Save all data and exit the program
-1: Open Product Menu
-2: Open Courier Menu
-3: Open Order Menu
 
-    1: Product Menu:
-        0: Return to Main Menu
-        1: View Product List
-        2: Add New Product to Product List
+	0: Save all data and exit the program
+	1: Open Product Menu
+	2: Open Courier Menu
+	3: Open Order Menu
 
-    2: Courier Menu:
-        0: Return to Main Menu
-        1: View Courier List
-        2: Add New Courier to Courier List
+        1: Product Menu:
+            0: Return to Main Menu
+            1: View Product List
+            2: Add New Product to Product List
 
-    3: Order Menu:
-        0: Return to Main Menu
-        1: View existing Order
-        2: Create New Order
-        3: Update Order Status
+        2: Courier Menu:
+            0: Return to Main Menu
+            1: View Courier List
+            2: Add New Courier to Courier List
+
+        3: Order Menu:
+            0: Return to Main Menu
+            1: View existing Order
+            2: Create New Order
+            3: Update Order Status
