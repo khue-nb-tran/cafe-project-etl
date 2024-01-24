@@ -3,7 +3,7 @@ import urllib.parse
 import boto3
 import csv
 from io import StringIO
-from app import transform
+from Transform.app import transform
 
 s3 = boto3.client('s3')
 
@@ -39,7 +39,7 @@ def lambda_handler(event, context):
     modified_file_content = csv_buffer.getvalue()
 
     # Write the modified file to the new bucket
-    destination_bucket = '2muchsauce-cleandata'
+    destination_bucket = 'Clean-Data'
     s3.put_object(Body=modified_file_content, Bucket=destination_bucket, Key=key)
 
     return {

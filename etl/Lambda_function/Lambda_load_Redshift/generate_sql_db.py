@@ -3,16 +3,6 @@ from connect_to_db import *
 def create_db_tables(connection, cursor) -> bool:
     print('create_db_tables started')
     try:
-        #Drop tables if they exist
-        # drop_tables_sql = (
-        #     "DROP TABLE IF EXISTS Order_breakdown;",
-        #     "DROP TABLE IF EXISTS Orders ;",
-        #     "DROP TABLE IF EXISTS products;"
-        # )
-        
-        # for command in drop_tables_sql:
-        #     cursor.execute(command)
-        
         # Create tables
         create_tables_sql = ("""
             CREATE TABLE IF NOT EXISTS Orders (

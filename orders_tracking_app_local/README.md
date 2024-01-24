@@ -1,7 +1,9 @@
-# Project Background
+Application runs on local device to track orders of one cafe branch
+
+# Background information
 
 My client has launched a pop-up cafe in a busy business district. They are offering refreshments to the surrounding offices. They require a software application which helps them to log and track orders.
-This project aims to provide them with this software that allows them to log and track orders using CLI command.
+This order tracking application will allow them to log and track orders using CLI command.
 
 # Client Requirements
 
@@ -12,7 +14,7 @@ As a business:
 - When they exit the app, all data needs to be persisted and not lost.
 - When they start the app, all persisted data will be loaded.
 
-# How to Run the App
+# How to Run the App 
 
 User should have Python installed.
 
@@ -22,7 +24,7 @@ The program runs on the command line. It has menus of options on display and req
 User should choose appropriate options and input relevant information where required.
 The program has option to exit/ return to main menu to assist user with navigating the program. 
 
-Program structure:
+# Program structure
 
 Main Menu:
 0: Save all data and exit the program

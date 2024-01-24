@@ -22,7 +22,7 @@ def lambda_handler(event, context):
     # Get the file object from S3
     file_obj = s3.get_object(Bucket=source_bucket, Key=key)
     file_content = file_obj['Body'].read().decode('utf-8')
-    #transactions = csv.DictReader(StringIO(file_content))
+    
     transactions = list(csv.DictReader(StringIO(file_content)))
 
     
@@ -33,7 +33,7 @@ def lambda_handler(event, context):
 
     create_db_tables(connection, cursor)
 
-    products = get_product_prices(transactions)  # acutally just unique_produts_list from below
+    products = get_product_prices(transactions) 
     
     orders = insert_orders(connection, cursor, transactions)
     
@@ -94,9 +94,6 @@ def insert_orders(connection, cursor, orders):
 
         order['order_id'] = order_id
         connection.commit()
-        
-    
-    # cursor.close()
     
     return orders
     
@@ -137,8 +134,6 @@ def insert_payment_type_db(connection, cursor, payment_types):
         else:
             payment_types[i] = {'payment_type_id': existing_type_id, 'type_name': payment_types[i]}
     
-    # cursor.close()
-    
     return payment_types            
     
 def insert_transactions_db(connection, cursor, transactions, branches, payment_types):
@@ -158,14 +153,10 @@ def insert_transactions_db(connection, cursor, transactions, branches, payment_t
         data = (orderid,branch_id, payment_type_id, total_cost, formatted_date)
         cursor.execute(sql, data)
         
-        # Fetch the last inserted order_id using IDENT_CURRENT
-        #cursor.execute("SELECT IDENT_CURRENT('transactions')")
-        #ohh. so we're adding a new key value pair for each record in the csv
         transaction['order_id'] = orderid
         connection.commit()
     print('Committed transactions')
         
-    # cursor.close()
     return transactions
 
 def get_product_prices(transactions):

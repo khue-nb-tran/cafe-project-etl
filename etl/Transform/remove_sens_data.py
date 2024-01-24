@@ -7,7 +7,6 @@ def remove_sens(orders):
         row.pop('name', None)
         row.pop('card_no', None)
 
-        
     return orders
 
 
